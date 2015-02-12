@@ -1,0 +1,48 @@
+<!-- -*- mode:markdown -*- -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>目白ロジックサークル</title>
+
+<script type="text/javascript" src="lib/marked.min.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div id="body">
+<md id="src">
+目白ロジックサークル活動記録
+================================================================
+
+## 2015年2月12日
+<a name="20150212"></a>
+どうも、MLC広報担当ta2gchです。<br>
+今日は小野先生-古森先生の現代数理論理学序説(P1-4)でした。<br>
+
+### キーワード
+- $CLw論理体系$
+- $M,N$はメタ論理式
+- $S,K,\rho$は式
+- $\mu,\nu,\kappa,\sigma,\tau,\tau=$は推論規則
+
+### 所感
+今日より現代数理論理学序説をみんなでやり始めました。<br>
+噂に聞いた通りの難易度で始めの数ページしか進んでいないのに、すでに脳味噌が蕩けそうです。<br>しかし、こんなところでくたばっているようでは、この先もっと苦労してしまう。<br>次回は自分(ta2gch)がspeakerなので気合を入れて準備しよう。では、よい週末を!
+
+[TOPページに戻る](index.html)
+</md>
+<div id="content"></div>
+</div>
+<script>
+var content = document.getElementById('content');
+var src = document.getElementById('src');
+content.innerHTML = marked(src.innerHTML);
+document.getElementById('body').removeChild(src);
+</script>
+</body>
+</html>

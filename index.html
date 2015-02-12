@@ -1,61 +1,58 @@
+<!-- -*- mode:markdown -*- -->
 <!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>目白ロジックサークル</title>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  </head>
-  <body>
-    <h1>目白ロジックサークル</h1>
-    <h2>ページの説明</h2>
-    <section class="summary">
-      このサイトは学習院大学内にある目白ロジックサークル(通称MLC)の非公式
-      ページです。<br>
-      URLの通りこのページは<a href="https://github.com">Github</a>
-      にて運用されており、広報用のサイトと同時にサークル内の
-      成果物の公開の場として設置されました。<br>
-    </section>
-    <h2>目白ロジックサークルとは</h2>
-    <section class="about">
-      <a href="http://www-cc.gakushuin.ac.jp/~13043015/mejirologic/">
-      公式のページ</a>より引用
-      <blockquote>
-	目白ロジックサークルは論理学に興味をもつ人達が互いに交流を
-	深める場として設立されました。<br>
-	同時に、この手の話題について漠然とした印象を抱いている人にも、
-	入門の機会といいますか、出会いの場を提供できたらよいと考えています。
-      </blockquote>
-    </section>
-    <h2>活動情報</h2>
-    <section id="info">
-      <!--現在予定されている活動はありません。-->
-      <table id="activity">
-	<thead>
-	  <tr><th>日付</th><th>内容</th><th>場所</th></tr>
-	</thead>
-	<tbody>
-	  <!--<tr><th>2015/02/05</th><th>定例会</th><th>未定</th></tr>-->
-	  <!--<tr><th>2015/02/05</th><th>MLC定例会</th><th>理学部図書室下</th></tr>-->
-	  <tr><th>2015/02/12</th><th>MLC定例会</th><th>大学図書館</th></tr>
-	</tbody>
-      </table>
-    </section>
-    <h2>外部リンク</h2>
-    <nav id="link">
-      <ul>
-        <li>
-	  <a href="http://www-cc.gakushuin.ac.jp/~13043015/mejirologic/">
-	    目白ロジックサークル公式ページ
-	  </a>
-	</li>
-      </ul>
-    </nav>
-    <h2>現在セミナーで使っている本</h2>
-    <section id="cm">
-      <ul>
-	<li><a href="http://www.amazon.co.jp/dp/4254117655">数理論理学[鹿島 亮(著)]</a></li>
-	<li><a href="http://www.amazon.co.jp/dp/4535785562">現代数理論理学序説[古森 雄一(著) 小野 寛晰(著)]</a></li>
-      </ul>
-    </section>
-  </body>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>目白ロジックサークル</title>
+<script type="text/javascript" src="lib/marked.min.js"></script>
+</head>
+<body>
+<div id="body">
+<md id="src">
+ようこそ目白ロジックサークルへ!
+================================================================
+
+ページの説明
+----------------------------------------------------------------
+このサイトは学習院大学内にある目白ロジックサークル(通称MLC)の非公式 ページです。<br>
+URLの通りこのページは[Github](http://github.com/MejiroLogic) にて運用されており、広報用のサイトと同時にサークル内の 成果物の公開の場として設置されました。
+
+目白ロジックサークルとは
+----------------------------------------------------------------
+公式曰く
+<blockquote>
+目白ロジックサークルは論理学に興味をもつ人達が互いに交流を
+深める場として設立されました。<br>
+同時に、この手の話題について漠然とした印象を抱いている人にも、
+入門の機会といいますか、出会いの場を提供できたらよいと考えています。 
+</blockquote>
+
+活動情報
+----------------------------------------------------------------
+
+|  日付    |   内容   |   場所   |                   活動記録         |
+|:--------:|:-------:|:---------:|:---------------------------------:|
+|2015/02/12|MLC定例会 |大学図書館 |[活動記録](./history.html#20150212)|
+|2015/02/16|MLC定例会 |大学図書館 |[活動記録](./history.html#mirai)|
+|2015/03/05|MLC定例会 |大学図書館 |[活動記録](./history.html#mirai)|
+
+外部リンク
+----------------------------------------------------------------
+- [目白ロジックサークル公式ページ](http://www-cc.gakushuin.ac.jp/~13043015/mejirologic/)
+
+現在セミナーで使っている本
+----------------------------------------------------------------
+- [数理論理学( 鹿島 亮(著) )](http://www.amazon.co.jp/dp/4254117655)
+- [現代数理論理学序説( 古森 雄一(著) 小野 寛晰(著) )](http://www.amazon.co.jp/dp/4535785562)
+
+</md>
+<div id="content"></div>
+</div>
+<script>
+var content = document.getElementById('content');
+var src = document.getElementById('src');
+content.innerHTML = marked(src.innerHTML);
+document.getElementById('body').removeChild(src);
+</script>
+</body>
 </html>
